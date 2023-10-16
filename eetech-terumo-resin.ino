@@ -138,6 +138,7 @@ void loop()
     digitalWrite(outpin1, HIGH);
   }
 
+  // IP HERE MUST BE THE RPI HOST IN THAT AREA / PLANT
   // send data - 1
   http1.begin(wclient, "http://192.168.137.56/project-equipment/receiver.php?d=" + String(dId1) + "•" + String(dFlag1));    // device id, device status
   httpCode1 = http1.GET();
